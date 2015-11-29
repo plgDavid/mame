@@ -38,7 +38,7 @@ const device_type NAMCO_CUS30 = &device_creator<namco_cus30_device>;
 namco_audio_device::namco_audio_device(const machine_config &mconfig, device_type type, const char *name, const char *tag, device_t *owner, UINT32 clock, const char *shortname, const char *source)
 	: device_t(mconfig, type, name, tag, owner, clock, shortname, __FILE__)
 	, device_sound_interface(mconfig, *this)
-	, m_wave_region(*this, tag)
+	, m_wave_region(*this, this->tag())
 	, m_last_channel(NULL)
 	, m_soundregs(NULL)
 	, m_wavedata(NULL)
